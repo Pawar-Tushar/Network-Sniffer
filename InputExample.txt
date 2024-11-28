@@ -1,0 +1,6 @@
+python Main.py c --i eth0 --pc 100
+python Main.py c --i eth0 --pc 100 --f "src host 192.168.1.1 and tcp"
+python Main.py c --i eth0 --pc 100 --a --s --t capture.txt
+python Main.py c --i eth0 --pc 100 --s --p capture.pcap
+python Main.py c --i eth0 --pc 100 --s --t capture.txt --p capture.pcap
+python Main.py lh --ip 192.168.1.104
