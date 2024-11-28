@@ -42,10 +42,9 @@ The tool is ideal for network monitoring, device enumeration, and testing the re
 
 ## Requirements
 
-- **Python 3.x**: Ensure you have Python 3 or later installed.
+- **Python 3**: Ensure you have Python 3 or later installed.
 - **Scapy Library**: This tool requires Scapy for network packet crafting.
-  - Install Scapy with:  
-    `pip install scapy`
+
 
 ---
 
@@ -53,7 +52,7 @@ The tool is ideal for network monitoring, device enumeration, and testing the re
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/yourusername/SecureNet-Analyzer.git
+   git clone https://github.com/Pawar-Tushar/SecureNet-Analyzer.git
 
 2. **Navigate to the project directory:**
     ```bash
@@ -136,12 +135,12 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 ## Legal Disclaimer
 
-The use of code contained in this repository, either in part or in its totality, for engaging targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws.
+The use of code contained in this repository, either in part or in its entirety, for engaging with targets without prior, explicit mutual consent is **illegal**. It is the **end user's responsibility** to comply with all applicable **local, state, and federal laws**.
 
-The developers assume no liability and are not responsible for misuses or damages caused by any code contained in this repository in any event that, accidentally or otherwise, it comes to be utilized by a threat agent or unauthorized entity as a means to compromise the security, privacy, confidentiality, integrity, and/or availability of systems and their associated resources. In this context, the term **"compromise"** is henceforth understood as the leverage or exploitation of known or unknown vulnerabilities present in said systems.
+The developers assume **no liability** and are **not responsible** for any misuse or damages caused by the use of any code contained in this repository. This applies in any event, whether **accidental** or **intentional**, if the code is utilized by a threat actor or unauthorized entity to **compromise** the security, privacy, confidentiality, integrity, and/or availability of systems or associated resources. In this context, **"compromise"** refers to the **exploitation of known or unknown vulnerabilities** in systems, including, but not limited to, weaknesses in **security controls** (human- or electronically-enabled).
 
-The use of this code is only endorsed by the developers in those circumstances directly related to **educational environments** or **authorized penetration testing engagements** whose declared purpose is the identification and mitigation of vulnerabilities in systems.
-
+The developers explicitly endorse the use of this code only in **educational environments** for the purpose of learning or teaching cybersecurity concepts and in **authorized penetration testing engagements**, where the system owner has given **explicit consent**. The goal should be to identify and mitigate vulnerabilities and protect systems from potential exploitation by malicious agents, as outlined in the respective threat models.
+Before using this tool, ensure you have **written authorization** and adhere to all relevant laws and ethical guidelines.
 **It is crucial that this tool is used ethically and legally. Unauthorized use could result in severe consequences under law.**
 
 ---
