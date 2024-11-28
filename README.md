@@ -25,6 +25,7 @@ The tool is ideal for network monitoring, device enumeration, and testing the re
 9. [License](#license)
 10. [Acknowledgements](#acknowledgements)
 11. [Conclusion](#conclusion)
+12. [Contact](#contact)
 
 ---
 
@@ -51,19 +52,21 @@ The tool is ideal for network monitoring, device enumeration, and testing the re
 ## Installation Instructions
 
 1. **Clone the Repository**:  
-   Clone the repository to your local machine using Git:
    ```bash
    git clone https://github.com/yourusername/SecureNet-Analyzer.git
 
-### Install Dependencies:
-2. Navigate to the project directory:
+2. **Navigate to the project directory:**
     ```bash
     cd SecureNet-Analyzer
     ```
 
-3. Install the required dependencies using **pip**:
+3. **Install the required dependencies using pip**:
     ```bash
     pip install -r requirements.txt
+    ```
+3. **Run the Application**:
+    ```bash
+    python Main.py  [option] [arguments]
     ```
 
 ### Ensure Privileges:
@@ -80,30 +83,91 @@ Since the tool requires access to network interfaces, make sure to run the scrip
 
 ## Usage Examples
 
-The tool operates via the command line interface (CLI). Below are some basic commands and usage examples:
+The tool operates via the command line interface (CLI). Below are some basic commands and examples:
 
-### General Syntax:
+### Options:
+- `-c` or `--capture`: Start packet capture and analysis.
+- `-lh` or `--live-host`: Perform live host detection on the network.
+
+### Common Arguments:
+- `--i [interface]`: Specify the network interface to capture packets from (e.g., eth0, Wi-Fi).
+- `--pc [number]`: Specify the number of packets to capture.
+- `--a`: Analyze captured packets in real-time.
+- `--s`: Save captured packets.
+- `--p [filename]`: Save captured packets in PCAP format.
+- `--t [filename]`: Save captured packets in TXT format.
+- `--f [filter]`: Define a filter condition (e.g., 'src host 192.168.1.1 and tcp').
+- `--ip [IP address]`: Specify an IP address for live host detection.
+
+### Example 1: Start Packet Capture
 ```bash
-python main.py [option] [arguments]
-### Example 1: Start Packet Capture:
+python Main.py c --i Wi-Fi --pc 10 --a --s --p captured_traffic.pcap 
+```
+
+### Example 2: Live Host Detection
 ```bash
-python main.py -c --i Wi-Fi --pc 10 --a --s --p captured_traffic.pcap
+python Main.py lh --ip 192.168.1.1
+```
+## Security Considerations
 
-### Breakdown of the sections:
+- **Password Storage**: Passwords are securely stored using SHA-256 hashing and never stored in plain text.
+- **Network Monitoring**: Use the tool responsibly only on networks where you have explicit permission to capture and analyze traffic. Unauthorized traffic analysis may be illegal and unethical.
+- **ARP Spoofing**: The tool uses ARP requests for live host detection, which could trigger ARP spoofing alerts on certain networks. Ensure the tool is used in authorized environments.
 
-- **Introduction**: Briefly introduces the tool and its primary functions.
-- **Table of Contents**: Gives users a quick overview of the documentation structure.
-- **Features**: Outlines key functionalities of the tool.
-- **Requirements**: Lists the software dependencies for running the tool.
-- **Installation Instructions**: Provides clear steps for installing the tool and its dependencies.
-- **Usage Examples**: Shows basic command-line usage examples for different functionalities.
-- **Security Considerations**: Highlights key security-related aspects of using the tool.
-- **Troubleshooting**: Offers solutions for common issues users may encounter.
-- **Contributing**: Encourages open-source contributions and sets clear expectations.
-- **Legal Disclaimer**: A critical section that warns users about the legal and ethical use of the tool.
-- **License**: Specifies the project's open-source license.
-- **Acknowledgements**: Credits to third-party libraries or tools that have been used.
-- **Conclusion**: Wraps up with a call-to-action, reinforcing the tool's usefulness and potential applications.
+---
 
-This README.md template ensures a professional presentation of your project while maintaining clarity and accessibility for users.
+## Troubleshooting
+
+- **Permission Issues**: If you are unable to capture packets, ensure you are running the tool with the appropriate permissions (e.g., using **sudo** on Linux/macOS).
+- **Missing Dependencies**: If the tool fails to run due to missing dependencies, verify that you have installed all required packages as outlined in the installation instructions.
+- **Network Interface Not Detected**: If the network interface is not detected, verify it is available by running **ifconfig** (Linux/macOS) or **ipconfig** (Windows) to check available interfaces.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your improvements or bug fixes. When submitting changes, please ensure:
+
+- Code is well-documented.
+- Any new features are accompanied by clear explanations and examples.
+- Tests are provided for new functionalities (if applicable).
+
+---
+
+## Legal Disclaimer
+
+The use of code contained in this repository, either in part or in its totality, for engaging targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws.
+
+The developers assume no liability and are not responsible for misuses or damages caused by any code contained in this repository in any event that, accidentally or otherwise, it comes to be utilized by a threat agent or unauthorized entity as a means to compromise the security, privacy, confidentiality, integrity, and/or availability of systems and their associated resources. In this context, the term **"compromise"** is henceforth understood as the leverage or exploitation of known or unknown vulnerabilities present in said systems.
+
+The use of this code is only endorsed by the developers in those circumstances directly related to **educational environments** or **authorized penetration testing engagements** whose declared purpose is the identification and mitigation of vulnerabilities in systems.
+
+**It is crucial that this tool is used ethically and legally. Unauthorized use could result in severe consequences under law.**
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgements
+
+- **Scapy**: For providing powerful functionality for packet crafting and sending.
+- **Python 3.x**: For the simplicity and flexibility it offers for network programming.
+- **Wireshark**: For being a trusted tool for analyzing PCAP files, which you can use alongside this tool.
+
+---
+
+## Conclusion
+
+**SecureNet Analyzer** is a robust and versatile tool designed for network security monitoring, packet analysis, and vulnerability detection. Whether you are a network administrator, a cybersecurity professional, or a penetration tester, this tool will provide valuable insights into network behavior, enhance security monitoring, and assist with identifying potential threats and vulnerabilities.
+
+## Contact
+
+For any queries or issues, feel free to reach out via GitHub Issues or email me at [tusharpawar@749963.com].
+
+
+
 
