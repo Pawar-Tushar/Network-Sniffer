@@ -32,7 +32,7 @@ The tool is ideal for network monitoring, device enumeration, and testing the re
 ## Features
 
 - **Packet Capture and Analysis**: Capture and analyze network traffic from any network interface. Extract detailed information including IPs, ports, protocols, and payloads.
-- **Live Host Detection**: Detect live devices on your network using ARP requests, and map IP and MAC addresses.
+- **Live Host Detection**:Detect live devices on your network using ARP requests, mapping their IP, MAC addresses, and NIC vendor names.
 - **Packet Creation and Sending**: Craft custom packets and send them to specified addresses for network testing and vulnerability assessment.
 - **SHA-256 Authentication**: Implement secure user authentication with password hashing using SHA-256.
 - **Data Export**: Export captured packets in **PCAP** and **TXT** formats for further analysis and sharing.
